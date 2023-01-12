@@ -1,5 +1,6 @@
 
-        <div id="headtext">
+<div class="desktop-only">
+        <div class="headtext">
             <h1>Rubicon Management LLC</h1>
         </div>
         <div class="navbar margined-content">
@@ -8,14 +9,36 @@
             <a class="navlink" href="#">Rentals</a>
             <a class="navlink" href="#">About</a>
         </div>
-
+    </div>
+<div class="mobile-only">
+    <div class="flex-header">
+        <svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+        </svg>
+        <div class="headtext">
+            <h1>Rubicon Management LLC</h1>
+        </div>
+    </div>
+    <div class="hamburger-menu">
+        <div class="navbar margined-content">
+            <a class="navlink" href="#">Home</a>
+            <a class="navlink" href="#">Property Management</a>
+            <a class="navlink" href="#">Rentals</a>
+            <a class="navlink" href="#">About</a>
+        </div>
+    </div>
+</div>
 <style>
 
-#headtext{
+
+
+.headtext{
     text-align: center;
     color: var(--menu-text-color)
 }
-#headtext > h1 {
+.headtext > h1 {
     font-size: xx-large;
 }
     
@@ -52,6 +75,40 @@
     border-bottom-width: 1px;
     margin-bottom: 1px;
     color: #555;
+}
+
+.mobile-only{
+    display: none;
+}
+
+@media (max-width: 800px){
+    .desktop-only{
+        display: none;
+    }
+    .mobile-only{
+        display: inherit;
+    }
+
+    .flex-header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .hamburger-menu{
+        display: none;
+    }
+.headtext > h1 {
+    font-size: x-large;
+}
+
+}
+
+@media (max-width: 400px){
+    
+.headtext > h1 {
+    font-size: large;
+}
 }
 
 </style>
