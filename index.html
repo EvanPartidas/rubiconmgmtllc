@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <section id="headerContent"></section>
+    <section id="cover-block">
+      <div id="cover-block-inner">
+      <img id="cover-image" src="https://g5-assets-cld-res.cloudinary.com/image/upload/x_0,y_350,h_1650,w_3000,c_crop/q_auto,f_auto,c_fill,g_center,h_1100,w_2000/v1624489518/g5/g5-c-5rascf9nf-bellrock-real-estate-partners-single-domain/g5-cl-1lkzvl4l9b-bellrock-real-estate-partners-single-domain-fort-worth-tx/uploads/GettyImages-923519778_vosau7.jpg">
+      <div class="cover-text-container">
+        <h1>Find your home.</h1>
+      </div>
+    </div>
+    </section>
+    <section class="bg-gradient block">
+      <div>
+        <h1>Lorem ipsum dolor</h1>
+      </div>
+    </section>
+    <section class="grid-content">
+      <div class="card scroll-animable">
+        <h2>Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="card card2 scroll-animable">
+        <h2>Title</h2>
+        <p>Aliquam eleifend mi in nulla. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Sed enim ut sem viverra. Fusce id velit ut tortor pretium viverra suspendisse potenti. Consequat nisl vel pretium lectus. Massa massa ultricies mi quis hendrerit dolor magna eget. Nulla facilisi etiam dignissim diam quis enim. Iaculis nunc sed augue lacus viverra vitae congue. Nibh praesent tristique magna sit amet purus gravida quis. Pretium viverra suspendisse potenti nullam ac tortor vitae. Tortor id aliquet lectus proin nibh nisl condimentum id venenatis.</p>
+      </div>
+      <div class="card card3 scroll-animable">
+        <h2>Title</h2>
+        <p>Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Tortor at risus viverra adipiscing at in. Enim lobortis scelerisque fermentum dui faucibus in ornare quam. Cras adipiscing enim eu turpis egestas pretium aenean pharetra. Faucibus in ornare quam viverra orci sagittis eu. Purus gravida quis blandit turpis cursus in hac habitasse. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Tellus molestie nunc non blandit massa enim nec dui nunc. Ut placerat orci nulla pellentesque. Arcu dictum varius duis at. Ultrices mi tempus imperdiet nulla. In ornare quam viverra orci sagittis. Purus sit amet volutpat consequat. Ipsum dolor sit amet consectetur adipiscing elit duis tristique. Lacus viverra vitae congue eu consequat ac felis donec.</p>
+      </div>
+    </section>
+    <section class="two-column-content">
+      <div class="scroll-animable">
+        <img class="column-image" src="https://thumbs.dreamstime.com/b/businesswoman-attending-client-office-listening-to-who-talking-76560508.jpg">
+      </div>
+      <div class="scroll-animable">
+        <h1>Purus sit amet luctus venenatis lectus magna fringilla urna.</h1>
+      </div >
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script> 
+$(async function(){
+  $("#headerContent").load("header.html"); 
+    console.log($("#headerContent"));
+    waitForEl("#HomeNavItem",function(){
+        $("#HomeNavItem").addClass("active");
+    });
+});
+</script>      
+<script src="./animate.js"></script>
+  </body>
+</html>

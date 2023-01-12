@@ -1,0 +1,110 @@
+
+#cover-image{
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: -1;
+}
+
+#cover-block{
+    height: 25rem;
+    background-size: 100%;
+    padding: 20px 0px;
+}
+
+#cover-block-inner{
+    height: 80rem;
+}
+
+.cover-text-container{
+    position: absolute;
+    font-size: 30px;
+    color: black;
+    top: 200px;
+    left: 50px;
+}
+
+
+.block{
+    padding: 20px;
+}
+
+.bg-gradient{
+    background: linear-gradient(45deg,var(--color-primary),var(--color-primary-dark))
+}
+
+.grid-content{
+    padding: 100px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    background-color: white;
+}
+
+.scroll-animable{
+    --scroll-animation-keyframes: default-scroll-animation;
+    filter: opacity(0%);
+}
+.card{
+    background: linear-gradient(45deg,var(--color-primary) 80%,var(--color-primary-dark));
+    box-shadow: 5px 5px 2px #666;
+    padding: 5px;
+    border-radius: 5px;
+    --scroll-animation-keyframes: card-slide-in;
+    --scroll-animation-duration: 1s;
+    transform: translateX(-2000px);
+    filter: opacity(0%);
+
+}
+.card2{
+    --scroll-animation-duration: 0.8s;
+}
+.card3{
+    --scroll-animation-duration: 0.6s;
+}
+.scroll-animate{
+    animation: var(--scroll-animation-keyframes,none) var(--scroll-animation-duration, 1s) ease-in forwards;
+}
+
+@keyframes default-scroll-animation{
+    0%{
+        filter: opacity(0%);
+    }
+    100%{
+        filter: opacity(100%)
+    }
+}
+
+@keyframes card-slide-in {
+    0%{
+      transform: translateX(-2000px);
+      filter: opacity(0%);
+    }
+    100%{
+      transform: translateX(0);
+      filter: opacity(100%);
+    }
+}
+
+.column-image{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.two-column-content{
+    background-color: var(--color-primary-dark);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 30px;
+}
+
+
+@media (min-width: 500px){
+    .margined-content{
+        width: 80%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
