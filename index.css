@@ -53,7 +53,6 @@
     border-radius: 5px;
     --scroll-animation-keyframes: card-slide-in;
     --scroll-animation-duration: 1s;
-    transform: translateX(-2000px);
     filter: opacity(0%);
 
 }
@@ -64,7 +63,7 @@
     --scroll-animation-duration: 0.6s;
 }
 .scroll-animate{
-    animation: var(--scroll-animation-keyframes,none) var(--scroll-animation-duration, 1s) ease-in forwards;
+    animation: var(--scroll-animation-keyframes,none) var(--scroll-animation-duration, 1s) ease-in-out forwards;
 }
 
 @keyframes default-scroll-animation{
@@ -111,8 +110,8 @@
 
 @media (max-width: 800px){
     #cover-image{
-        width: 200%;
-        transform: translateX(-25%);
+        height: 500px;
+        object-fit: cover;
     }
     .grid-content{
         grid-template-columns: 1fr;
@@ -121,18 +120,18 @@
         column-gap: 30px;
     }
     .card{
-        --scroll-animation-duration: 0.6s;
+        --scroll-animation-duration: 1s;
     }
     .card2{
-        --scroll-animation-duration: 0.8s;
+        --scroll-animation-duration: 1s;
     }
     .card3{
         --scroll-animation-duration: 1s;
     }
+    .body{
+        overflow-x: hidden;
+    }
 }
 @media (max-width: 400px){
-    #cover-image{
-        width: 400%;
-        transform: translateX(-50%);
-    }
+    
 }
