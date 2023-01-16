@@ -29,6 +29,10 @@
 
 .block{
     padding: 20px;
+    background-color: var(--color-primary);
+    border-bottom-color: var(--color-primary-light);
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
 }
 .gradient-border{
     height: 5px;
@@ -53,8 +57,8 @@
     filter: opacity(0%);
 }
 .card{
-    background: linear-gradient(45deg,var(--color-primary) 80%,var(--color-primary-dark));
-    box-shadow: 5px 5px 2px #666;
+    background-color: var(--color-primary);
+    box-shadow: 5px 5px var(--color-primary-dark);
     padding: 5px;
     border-radius: 5px;
     --scroll-animation-keyframes: card-slide-in;
@@ -92,24 +96,20 @@
     }
 }
 
-.card:hover,.card:focus-within {
-    animation-fill-mode: none;
-    transform: scale(1.02);
-    filter: none;
-    cursor: default;
-}
-
 .column-image{
     width: 100%;
     border-radius: 5px;
 }
 
 .two-column-content{
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-primary);
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 3fr;
     column-gap: 30px;
+    border-bottom-color: var(--color-primary-dark);
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
 }
 
 
