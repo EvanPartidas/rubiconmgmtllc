@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="hamburger-menu">
-        <div class="navbar margined-content">
+        <div class="navbar">
             <a class="navlink" href="#">Home</a>
             <a class="navlink" href="#">Property Management</a>
             <a class="navlink" href="#">Rentals</a>
@@ -40,12 +40,6 @@
 }
 .headtext > h1 {
     font-size: xx-large;
-}
-    
-#headerContent{
-    background-color: white;
-    margin: 0;
-    padding-bottom: 10px;
 }
 
 .navbar{
@@ -80,6 +74,12 @@
     display: none;
 }
 
+.desktop-only{
+    background-color: white;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
 @media (max-width: 800px){
     .desktop-only{
         display: none;
@@ -94,9 +94,12 @@
         align-items: center;
     }
     .mobile-menu{
-        position: fixed;
+        position: sticky;
+        top: 0px;
         width: 100vw;
-        height: 80px;
+        background-color: white;
+        z-index: 2;
+        box-shadow: 10px 0px 10px;
     }
     .hamburger-menu{
         display: none;
@@ -108,9 +111,28 @@
         width: 100vw;
         background-color: var(--color-primary);
     }
-.headtext > h1 {
-    font-size: x-large;
-}
+    .navbar{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        padding-top: 20px;   
+    }
+    .navlink{
+        border-style: solid;
+        border-width: 2px;
+        width: max-content;
+        height: max-content;
+    }
+    .navlink:hover,.navlink:focus{
+        background: var(--color-primary-light);
+    }
+    .headtext > h1 {
+        font-size: x-large;
+    }
 
 }
 
@@ -124,6 +146,10 @@
 </style>
 <script>
     function expandMenu(){
-        $(".hamburger-menu").addClass("active");
+        let el = $(".hamburger-menu");
+        if(!el.hasClass("active"))
+            el.addClass("active");
+        else
+            el.removeClass("active");
     }
 </script>

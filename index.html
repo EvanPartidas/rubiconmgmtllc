@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./index.css">
   </head>
-  <body>
-    <section id="headerContent"></section>
+  <body>  
     <section id="cover-block">
       <div id="cover-block-inner">
       <img id="cover-image" src="https://g5-assets-cld-res.cloudinary.com/image/upload/x_0,y_350,h_1650,w_3000,c_crop/q_auto,f_auto,c_fill,g_center,h_1100,w_2000/v1624489518/g5/g5-c-5rascf9nf-bellrock-real-estate-partners-single-domain/g5-cl-1lkzvl4l9b-bellrock-real-estate-partners-single-domain-fort-worth-tx/uploads/GettyImages-923519778_vosau7.jpg">
@@ -50,8 +49,9 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script> 
 $(async function(){
-  $("#headerContent").load("header.html"); 
-    console.log($("#headerContent"));
+  $.get("header.html",function(header){
+    $("body").prepend(header);
+  });
     waitForEl("#HomeNavItem",function(){
         $("#HomeNavItem").addClass("active");
     });
