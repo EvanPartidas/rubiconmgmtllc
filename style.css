@@ -4,9 +4,9 @@
     --color-primary: #68d89b;
     --color-primary-dark: #4f9d69;
     --color-primary-light:  #8DffCD;
-    --color-secondary-dark: #007ea7;
+    --color-secondary-dark: #002fff;
     --color-secondary-light:  #00b5f1;
-    
+    --border-radius: 5px;
 }
 
 
@@ -20,4 +20,12 @@ body{
 
 .bg-primary{
     background-color: var(--color-primary);
+}
+
+@media (min-width: 500px){
+    .margined-content{
+        width: 80%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
 }

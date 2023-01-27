@@ -34,11 +34,6 @@
     border-bottom-width: 5px;
     border-bottom-style: solid;
 }
-.gradient-border{
-    height: 5px;
-    width: auto;
-    background: linear-gradient(90deg, var(--color-primary-light),var(--color-primary));
-}
 
 .bg-gradient{
     background: linear-gradient(45deg,var(--color-primary),var(--color-primary-dark))
@@ -49,7 +44,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 30px;
-    background-color: white;
+    background: white;
 }
 
 .scroll-animable{
@@ -59,7 +54,7 @@
 .card{
     background-color: var(--color-primary);
     box-shadow: 5px 5px var(--color-primary-dark);
-    padding: 5px;
+    padding: 5%;
     border-radius: 5px;
     --scroll-animation-keyframes: card-slide-in;
     --scroll-animation-duration: 1s;
@@ -112,14 +107,6 @@
     border-bottom-style: solid;
 }
 
-
-@media (min-width: 500px){
-    .margined-content{
-        width: 80%;
-        max-width: 700px;
-        margin: 0 auto;
-    }
-}
 
 @media (max-width: 800px){
     #cover-image{

@@ -4,8 +4,8 @@
             <h1>Rubicon Management LLC</h1>
         </div>
         <div class="navbar margined-content">
-            <a class="navlink" href="#">Home</a>
-            <a class="navlink" href="#">Property Management</a>
+            <a id="HomeNavItem" class="navlink" href="/">Home</a>
+            <a id="PptyMgmtNavItem" class="navlink" href="/propertymanagement.html">Property Management</a>
             <a class="navlink" href="#">Rentals</a>
             <a class="navlink" href="#">About</a>
         </div>
@@ -23,8 +23,8 @@
     </div>
     <div class="hamburger-menu">
         <div class="navbar">
-            <a class="navlink" href="#">Home</a>
-            <a class="navlink" href="#">Property Management</a>
+            <a class="navlink" href="/">Home</a>
+            <a class="navlink" href="/propertymanagement.html">Property Management</a>
             <a class="navlink" href="#">Rentals</a>
             <a class="navlink" href="#">About</a>
         </div>
@@ -57,7 +57,7 @@
     color: var(--menu-text-color);
     border-width: 0;
     border-bottom-width: 3px;
-    border-color: var(--color-primary-dark);
+    border-color: var(--color-primary);
     border-style: solid;
     padding: 20px;
     width: min-content;
@@ -65,9 +65,13 @@
     transition: all 0.2s ease;
 }
 
+.navlink.active{
+    border-color: var(--color-primary-dark);
+
+}
 .navlink:hover {
-    border-color: var(--color-primary);
-    color: #555;
+    border-color: var(--color-primary-light);
+    color: #888;
 }
 
 .mobile-only{
@@ -78,6 +82,7 @@
     background-color: white;
     margin-bottom: 0;
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 @media (max-width: 800px){
