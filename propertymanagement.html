@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="title" content="Rubicon: Property Management">
+  <meta name="og:title" content="Rubicon Management: Property Management">
+    <meta name="og:description" content="Property Management, Rentals, Construction and more in the Dallas area.">
+  <meta name="og:image" content="https://lirp.cdn-website.com/34f21eba/dms3rep/multi/opt/RUBICON-logo-dark-text-transparent---v2-182w.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./propertymanagement.css">
+    </head>
+    <body>
+      <div class="block">
+        <h1>Frequently Asked Questions</h1>
+      </div>
+      <div class="dropdown-faq-container">
+        <div class="dropdown-faq">
+          <div class="faq-header">
+            <h1>What do we do?</h1>
+            <svg viewBox="50 50" width="50px" height="50px">
+              <rect class="eraseWhenActive" x="20" y="0" rx="5" ry="5" width="10" height="50"></rect>
+              <rect x="0" y="20" rx="5" ry="5" width="50" height="10"></rect>
+            </svg>
+          </div>
+          <div class="faq-content">
+            <p>Lorem ipsum dolor sit amet , consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div class="dropdown-faq">
+          <div class="faq-header">
+            <h1>How do we do it?</h1>
+            <svg viewBox="50 50" width="50px" height="50px">
+              <rect class="eraseWhenActive" x="20" y="0" rx="5" ry="5" width="10" height="50"></rect>
+              <rect x="0" y="20" rx="5" ry="5" width="50" height="10"></rect>
+            </svg>
+          </div>
+          <div class="faq-content">
+            <p>Lorem ipsum dolor sit amet , consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div class="dropdown-faq">
+          <div class="faq-header">
+            <h1>How can I participate?</h1>
+            <svg viewBox="50 50" width="50px" height="50px">
+              <rect class="eraseWhenActive" x="20" y="0" rx="5" ry="5" width="10" height="50"></rect>
+              <rect x="0" y="20" rx="5" ry="5" width="50" height="10"></rect>
+            </svg>
+          </div>
+          <div class="faq-content">
+            <p>Lorem ipsum dolor sit amet , consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        
+        <div class="dropdown-faq">
+          <div class="faq-header">
+            <h1>How long do responses take?</h1>
+            <svg viewBox="50 50" width="50px" height="50px">
+              <rect class="eraseWhenActive" x="20" y="0" rx="5" ry="5" width="10" height="50"></rect>
+              <rect x="0" y="20" rx="5" ry="5" width="50" height="10"></rect>
+            </svg>
+          </div>
+          <div class="faq-content">
+            <p>Lorem ipsum dolor sit amet , consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script> 
+    var waitForEl = function(selector, callback) {
+  if (jQuery(selector).length) {
+    callback();
+  } else {
+    setTimeout(function() {
+      waitForEl(selector, callback);
+    }, 100);
+  }
+};
+
+$(async function(){
+  $.get("header.html",function(header){
+    $("body").prepend(header);
+  });
+    waitForEl("#PptyMgmtNavItem",function(){
+        $("#PptyMgmtNavItem").addClass("active");
+    });
+});
+$(".faq-header").on("click",function(event){
+  let el = $(event.target).closest(".dropdown-faq");
+  console.log(el);
+  if(!el.hasClass("active"))
+    el.addClass("active");
+  else
+    el.removeClass("active");
+})
+</script>      
+<script src="./animate.js"></script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+
+.dropdown-faq-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0px;
+}
+
+.block{
+    padding: 20px;
+    background-color: var(--color-primary);
+    border-bottom-color: var(--color-primary-dark);
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+}
+
+
+.dropdown-faq {
+    background-color: var(--color-primary);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    transition: box-shadow 0.2s ease-out;
+}
+
+.dropdown-faq:hover{
+    box-shadow: 5px 5px var(--color-primary-dark);
+}
+
+
+.faq-content{
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.2s;
+}
+
+.dropdown-faq.active > .faq-content{
+    height: min-content;
+}
+.dropdown-faq.active > .faq-header > svg > .eraseWhenActive {
+    fill: none;
+}
+
+
+.faq-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media (min-width: 800px){
+    .dropdown-faq-container{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
