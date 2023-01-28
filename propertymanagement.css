@@ -4,14 +4,34 @@
     flex-direction: column;
     gap: 10px;
     padding: 20px 0px;
+    animation: fade-in 0.3s ease-in-out;
 }
 
-.block{
+@keyframes fade-in {
+    0%{
+        filter: opacity(0%);
+    }
+    100%{
+        filter: none;
+    }
+}
+.page-section-header{
     padding: 20px;
     background-color: var(--color-primary);
     border-bottom-color: var(--color-primary-dark);
     border-bottom-width: 5px;
     border-bottom-style: solid;
+    text-align: center;
+    animation: slide-in 0.7s forwards cubic-bezier(.96,.19,.13,.98);
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: none;
+    }
 }
 
 

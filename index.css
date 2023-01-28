@@ -59,7 +59,11 @@
     --scroll-animation-keyframes: card-slide-in;
     --scroll-animation-duration: 1s;
     filter: opacity(0%);
+    transition: box-shadow 0.3s;
 
+}
+.card:hover{
+    box-shadow: 8px 8px var(--color-primary-dark);
 }
 .card2{
     --scroll-animation-duration: 0.8s;
